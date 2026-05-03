@@ -11,7 +11,8 @@ exports.addExpenses = async (req, res) => {
             title,
             amount,
             category,
-            date
+            date,
+            note
         });
 
         res.status(201).json({
