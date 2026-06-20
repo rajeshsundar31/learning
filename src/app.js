@@ -14,6 +14,7 @@ const app = express();
 
 //=====MiddleWaare======
 app.use(cors());
+// app.use(cors({origin: "specif endpoint from front-end", credentials: true}));
 app.use(express.json());
 
 //======Routes========

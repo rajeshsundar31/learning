@@ -23,3 +23,16 @@ exports.addExpenses = async (req, res) => {
         res.status(500).json({message: error.message});
     }
 }
+
+exports.getExpenses = async(req, res) => {
+    try {
+
+        const findUser = req.user.id;
+
+        const getExpenses = await expenses.find({findUser});
+
+        return res.status(200).json({getExpenses});
+    } catch (err) {
+        res.status(code).json({message: err.message});
+    }
+}
