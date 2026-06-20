@@ -6,9 +6,11 @@ const protect = require("../config/middleware");
 
 
 
-const { addExpenses } = require("../controller/expense-controller");
+const { addExpenses, getExpenses } = require("../controller/expense-controller");
 
 router.post("/addExpenses", protect, addExpenses);
+
+router.get("/getexpenses", protect, getExpenses);
 
 
 module.exports = router;
